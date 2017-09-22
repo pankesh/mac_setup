@@ -1,0 +1,48 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: localhost
+  user: lookup('env', 'USER')
+  connection: local
+
+  vars_files:
+    - vars/main.yml
+
+  tasks:
+    - name: Homebrew installs
+      homebrew: name={{ item.name }} state={{ item.state }}
+      with_items: "{{ homebrew_packages }}"
+
+    - name: Homebrew tap
+      homebrew_tap: name={{ item.name }} state={{ item.state }}
+      with_items: "{{ homebrew_taps }}"
+
+    - name: Homebrew cask installs
+      homebrew_cask: name={{ item.name }} state={{ item.state }}
+      with_items: "{{ homebrew_casks }}"
+
+    - name: Install Ruby gems
+      gem: name={{ item.name }} version={{ item.version }} state={{ item.state }}
+      with_items: "{{ homebrew_ruby_gems }}"
+
+    - name: Python packages
+      pip:
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+      with_items: "{{ homebrew_python_packages }}"
+
+    - name: Install Create React App
+      npm:
+        name: create-react-app
+        global: yes
+
+    - name: Is Atom editor customizations already installed?
+      stat:
+        path: $HOME/.atom/packages/language-babel/
+      register: language_babel
+      changed_when: False
+
+    - name: Atom editor customizations; for React syntax highlighting
+      command: apm install language-babel
+      when: language_babel.stat.exists == False
+ 
+

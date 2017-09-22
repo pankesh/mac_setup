@@ -1,0 +1,71 @@
+---
+homebrew_packages:
+  - { name: 'android-sdk', state: 'absent' }
+  - { name: 'awscli', state: 'absent' }  # Amazon CLI
+  - { name: 'brew-pip', state: 'absent' }  # https://github.com/hanxue/brew-pip
+  - { name: 'ghc', state: 'present' }  # Haskell compiler
+  - { name: 'cocoapods', state: 'absent' }  # Dependency manager for Swift and Objective-C
+  - { name: 'docker-compose', state: 'absent' }
+  - { name: 'git', state: 'present' }
+  - { name: 'go', state: 'absent' }
+  - { name: 'gnu-tar', state: 'present' }
+  - { name: 'gradle', state: 'absent' }
+  - { name: 'graphviz', state: 'present' }
+  - { name: 'groovy', state: 'present' }
+  - { name: 'jenv', state: 'present' }  # Command line Java manager.
+  - { name: 'jq', state: 'present' }  # command-line JSON processor
+  - { name: 'kafka', state: 'absent' }  # Apache Kafka
+  - { name: 'kotlin', state: 'present' }  # jvm language
+  - { name: 'mariadb', state: 'present' }  # After install, setup: 'mysql_install_db'; start: 'mysql.server start'
+  - { name: 'node', state: 'present' }  # https://nodejs.org/en/
+  - { name: 'packer', state: 'present' }  # https://www.packer.io/
+  - { name: 'protobuf', state: 'absent' }  # Google's data interchange format
+  - { name: 'python3', state: 'present' }
+  - { name: 'scala', state: 'present' }
+  - { name: 'ssh-copy-id', state: 'present' }
+  - { name: 'terraform', state: 'absent' }
+  - { name: 'tree', state: 'present' }  # List a directory with tree command.
+  - { name: 'watch', state: 'present' }
+  - { name: 'wget', state: 'present' }
+  - { name: 'xmlstarlet', state: 'present' }
+  - { name: 'yeti', state: 'absent' }  # Functional language for the JVM
+
+homebrew_taps:
+  - { name: 'caskroom/versions', state: 'present' }     
+  # See https://github.com/caskroom/homebrew-versions for available homebrew-versions Casks
+
+homebrew_casks:
+  - { name: 'atom', state: 'present' }
+  - { name: 'dropbox', state: 'present' }
+  - { name: 'eclipse-java', state: 'present' }
+  - { name: 'firefox', state: 'present' }
+  - { name: 'google-chrome', state: 'present' }
+  - { name: 'intellij-idea-ce', state: 'present' }
+  - { name: 'iterm2', state: 'present' }
+  - { name: 'java', state: 'present' }
+  - { name: 'java6', state: 'present' }
+  - { name: 'java9-beta', state: 'absent' }
+  - { name: 'kindle', state: 'present' }
+  - { name: 'kitematic', state: 'present' }  # Used with docker
+  - { name: 'slack', state: 'present' }
+  - { name: 'skitch', state: 'present' }
+  - { name: 'screenhero', state: 'present' }
+  - { name: 'screenflow', state: 'absent' }  # screencasting and video editing
+  - { name: 'sequel-pro', state: 'absent' }
+  - { name: 'sourcetree', state: 'absent' }  # git client
+  - { name: 'sublime-text', state: 'present' }
+  - { name: 'vagrant', state: 'present' }
+  - { name: 'virtualbox', state: 'present' }
+  - { name: 'visual-studio-code', state: 'present' }
+  - { name: 'xquartz', state: 'present' }
+
+homebrew_ruby_gems:
+  - { name: 'kitchen-vagrant', version: '1.0.2', state: 'absent' }
+  - { name: 'test-kitchen', version: '1.12.0', state: 'absent' }
+  # Note: local gems are not included in the PATH, make sure to set it up
+
+homebrew_python_packages:
+  - { name: 'virtualenv', state: 'present' }
+  - { name: 'ansible-container', state: 'absent' }
+# note: When working with python projects consider virtualenv instead of pip install globally.
+
