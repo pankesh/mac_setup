@@ -38,7 +38,6 @@ or alternatively
 - zsh
 - dot files
 - git command completion
-- Dash app
 
 ## Brew commands to periodically run:
 
