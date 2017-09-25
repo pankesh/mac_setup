@@ -36,6 +36,7 @@ homebrew_taps:
 
 homebrew_casks:
   - { name: 'atom', state: 'present' }
+  - { name: 'dash', state: 'present' }
   - { name: 'dropbox', state: 'present' }
   - { name: 'eclipse-java', state: 'present' }
   - { name: 'firefox', state: 'present' }
