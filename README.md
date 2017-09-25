@@ -1,4 +1,4 @@
-# My Mac Setup
+# My Mac Setup   [![Build Status](https://travis-ci.org/mchidzik/mac_setup.svg?branch=master)](https://travis-ci.org/mchidzik/mac_setup)
 
 The purpose is to aid the setup/configuration/update of my Mac OS setup. 
 
