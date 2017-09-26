@@ -1,12 +1,11 @@
 ---
-language: python
-python: "2.7"
+os: osx
+osx_image: xcode9
 
 before_install:
-  - sudo apt-get update -qq
 
 install:
-  - pip install ansible
+  - brew install ansible
   
 script:
-  - ansible-playbook ./setup.yml --syntax-check
+  - ansible-playbook ./setup.yml
