@@ -18,9 +18,11 @@ homebrew_packages:
   - { name: 'kotlin', state: 'present' }  # jvm language
   - { name: 'mariadb', state: 'present' }  # After install, setup: 'mysql_install_db'; start: 'mysql.server start'
   - { name: 'node', state: 'present' }  # https://nodejs.org/en/
+  - { name: 'openssl', state: 'present' }
   - { name: 'packer', state: 'present' }  # https://www.packer.io/
   - { name: 'protobuf', state: 'absent' }  # Google's data interchange format
   - { name: 'python3', state: 'present' }
+  - { name: 'r', state: 'present' }
   - { name: 'scala', state: 'present' }
   - { name: 'ssh-copy-id', state: 'present' }
   - { name: 'terraform', state: 'absent' }
@@ -32,6 +34,7 @@ homebrew_packages:
 
 homebrew_taps:
   - { name: 'caskroom/versions', state: 'present' }     
+  - { name: 'homebrew/science', state: 'present' }   # for R language
   # See https://github.com/caskroom/homebrew-versions for available homebrew-versions Casks
 
 homebrew_casks:
@@ -48,6 +51,7 @@ homebrew_casks:
   - { name: 'java9-beta', state: 'absent' }
   - { name: 'kindle', state: 'present' }
   - { name: 'kitematic', state: 'present' }  # Used with docker
+  - { name: 'rstudio', state: 'present' }  # GUI for R language
   - { name: 'slack', state: 'present' }
   - { name: 'skitch', state: 'present' }
   - { name: 'screenhero', state: 'present' }
