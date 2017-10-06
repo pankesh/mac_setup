@@ -5,10 +5,8 @@ The purpose is to aid the setup/configuration/update of my Mac OS setup.
 ## First steps.
 Install homebrew, see: http://brew.sh
 
-Install homebrew cask, see https://caskroom.github.io/
-
 ````
-brew tap caskroom/cask
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ````
 
 ## Install ansible
@@ -18,7 +16,7 @@ brew install ansible
 ````
 
 ## Running this playbook:
-First update the vars/main.yml file with the software you want on your Mac. Then run the playbook.
+First update the vars/setup.yml file with the software you want on your Mac. Then run the playbook.
 
 
 ````

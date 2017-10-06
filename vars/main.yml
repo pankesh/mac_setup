@@ -1,6 +1,8 @@
 ---
 homebrew_packages:
   - { name: 'android-sdk', state: 'absent' }
+  - { name: 'apache-spark', state: 'present' }
+  - { name: 'apache-zeppelin', state: 'present' }
   - { name: 'awscli', state: 'absent' }  # Amazon CLI
   - { name: 'brew-pip', state: 'absent' }  # https://github.com/hanxue/brew-pip
   - { name: 'ghc', state: 'present' }  # Haskell compiler
