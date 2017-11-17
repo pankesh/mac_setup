@@ -45,4 +45,8 @@
       command: apm install language-babel
       when: language_babel.stat.exists == False
  
-
+    - name: Clone Play framework starter project
+      git: 
+        repo: "https://github.com/playframework/play-java-starter-example.git"
+        dest: "/Users/mchidz8046k/work/ccad/development/play-framework"
+      

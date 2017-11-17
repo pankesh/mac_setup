@@ -1,15 +1,21 @@
 ---
 homebrew_packages:
   - { name: 'android-sdk', state: 'absent' }
-  - { name: 'apache-spark', state: 'present' }
-  - { name: 'apache-zeppelin', state: 'present' }
   - { name: 'awscli', state: 'absent' }  # Amazon CLI
   - { name: 'brew-pip', state: 'absent' }  # https://github.com/hanxue/brew-pip
+  
+  # cloud foundry packages 
+  - { name: 'cf-cli', state: 'present' }
+  - { name: 'bosh-init', state: 'absent' }
+  - { name: 'bosh-cli', state: 'present' }
+  - { name: 'credhub-cli', state: 'absent' }
+  - { name: 'bbl', state: 'absent' }
+
   - { name: 'ghc', state: 'present' }  # Haskell compiler
   - { name: 'cocoapods', state: 'absent' }  # Dependency manager for Swift and Objective-C
   - { name: 'docker-compose', state: 'absent' }
   - { name: 'git', state: 'present' }
-  - { name: 'go', state: 'absent' }
+  - { name: 'go', state: 'present' }
   - { name: 'gnu-tar', state: 'present' }
   - { name: 'gradle', state: 'absent' }
   - { name: 'graphviz', state: 'present' }
@@ -18,6 +24,7 @@ homebrew_packages:
   - { name: 'jq', state: 'present' }  # command-line JSON processor
   - { name: 'kafka', state: 'absent' }  # Apache Kafka
   - { name: 'kotlin', state: 'present' }  # jvm language
+  - { name: 'lua', state: 'present' }  # lua language
   - { name: 'mariadb', state: 'present' }  # After install, setup: 'mysql_install_db'; start: 'mysql.server start'
   - { name: 'node', state: 'present' }  # https://nodejs.org/en/
   - { name: 'openssl', state: 'present' }
@@ -36,6 +43,8 @@ homebrew_packages:
 
 homebrew_taps:
   - { name: 'caskroom/versions', state: 'present' }     
+  - { name: 'cloudfoundry/tap', state: 'present' }
+  - { name: 'homebrew/homebrew-php', state: 'present' }
   - { name: 'homebrew/science', state: 'present' }   # for R language
   # See https://github.com/caskroom/homebrew-versions for available homebrew-versions Casks
 
