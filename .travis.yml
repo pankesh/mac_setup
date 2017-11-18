@@ -5,7 +5,7 @@ osx_image: xcode9
 before_install:
 
 install:
-  - travis_wait brew install ansible
+  - brew install ansible
   
 script:
   - ansible-playbook ./setup.yml
