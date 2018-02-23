@@ -9,7 +9,7 @@
 
   tasks:
     - name: Homebrew installs
-      homebrew: name={{ item.name }} state={{ item.state }}
+      homebrew: name={{ item.name }} state={{ item.state }} install_options={{ item.install_options }}
       with_items: "{{ homebrew_packages }}"
 
     - name: Homebrew tap
