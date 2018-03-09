@@ -44,6 +44,7 @@ homebrew_packages:
   - { name: 'yeti', state: 'absent', install_options: '' }  # Functional language for the JVM
 
   #
+  - { name: 'bash-completion', state: 'present', install_options: '' } 
   - { name: 'kubectl', state: 'present', install_options: '' }  # kubernetes
   - { name: 'openshift-cli', state: 'present', install_options: '' }  # for use with kubernetes
 
@@ -60,6 +61,7 @@ homebrew_casks:
   - { name: 'dropbox', state: 'present' }
   - { name: 'eclipse-java', state: 'present' }
   - { name: 'firefox', state: 'present' }
+  - { name: 'github', state: 'absent' }  # github desktop
   - { name: 'google-chrome', state: 'present' }
   - { name: 'intellij-idea-ce', state: 'present' }
   - { name: 'iterm2', state: 'present' }
@@ -68,6 +70,7 @@ homebrew_casks:
   - { name: 'java9-beta', state: 'absent' }
   - { name: 'kindle', state: 'present' }
   - { name: 'kitematic', state: 'present' }  # Used with docker
+  - { name: 'minikube', state: 'present' }  # Tool that makes it easy to run Kubernetes locally
   - { name: 'rstudio', state: 'present' }  # GUI for R language
   - { name: 'slack', state: 'present' }
   - { name: 'skitch', state: 'present' }
