@@ -53,6 +53,7 @@ homebrew_taps:
   - { name: 'cloudfoundry/tap', state: 'present' }
   - { name: 'homebrew/homebrew-php', state: 'present' }
   - { name: 'homebrew/science', state: 'present' }   # for R language
+  - { name: 'pivotal/tap', state: 'present' }   # for R language
   # See https://github.com/caskroom/homebrew-versions for available homebrew-versions Casks
 
 homebrew_casks:
