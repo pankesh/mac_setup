@@ -1,13 +1,13 @@
 ---
 homebrew_packages:
   - { name: 'android-sdk', state: 'absent', install_options: '' }
-  - { name: 'awscli', state: 'absent', install_options: '' }  # Amazon CLI
+  - { name: 'awscli', state: 'present', install_options: '' }  # Amazon CLI
   - { name: 'brew-pip', state: 'absent', install_options: '' }  # https://github.com/hanxue/brew-pip
   
   # cloud foundry packages 
   - { name: 'cf-cli', state: 'present', install_options: '' }
   - { name: 'bosh-init', state: 'absent', install_options: ''  }
-  - { name: 'bosh-cli', state: 'present', install_options: '' }
+  - { name: 'bosh-cli', state: 'absent', install_options: '' }
   - { name: 'credhub-cli', state: 'absent', install_options: '' }
   - { name: 'bbl', state: 'absent', install_options: '' }
 
@@ -35,6 +35,7 @@ homebrew_packages:
   - { name: 'r', state: 'present', install_options: '' }
   - { name: 'scala', state: 'present', install_options: '' }
   - { name: 'ssh-copy-id', state: 'present', install_options: '' }
+  - { name: 'swift', state: 'present', install_options: '' }
   - { name: 'terraform', state: 'absent', install_options: '' }
   - { name: 'tree', state: 'present', install_options: '' }  # List a directory with tree command.
   - { name: 'watch', state: 'present', install_options: '' }
@@ -68,7 +69,7 @@ homebrew_casks:
   - { name: 'iterm2', state: 'present' }
   - { name: 'java', state: 'present' }
   - { name: 'java6', state: 'present' }
-  - { name: 'java9-beta', state: 'absent' }
+  - { name: 'java9', state: 'absent' }
   - { name: 'kindle', state: 'present' }
   - { name: 'kitematic', state: 'present' }  # Used with docker
   - { name: 'minikube', state: 'present' }  # Tool that makes it easy to run Kubernetes locally
