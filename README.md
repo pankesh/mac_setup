@@ -33,6 +33,7 @@ or alternatively
 ----
 
 ## More setup needed:
+- install java from Oracle
 - install xcode, from the App Store
 - docker for mac, see https://docs.docker.com/docker-for-mac/
 - zsh
