@@ -38,6 +38,8 @@ or alternatively
 - zsh
 - dot files
 - git command completion
+- iterm setting
+- launchbar index
 
 ## Brew commands to periodically run:
 
