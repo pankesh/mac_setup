@@ -14,7 +14,7 @@ homebrew_packages:
   - { name: 'wget', state: 'present' }
 
 homebrew_taps:
-  - { name: 'caskroom/versions', state: 'present' }     
+  - { name: 'homebrew/cask-versions', state: 'present' }     
 #  # See https://github.com/caskroom/homebrew-versions for available homebrew-versions Casks
 
 homebrew_casks:
