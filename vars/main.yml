@@ -15,9 +15,11 @@ homebrew_packages:
 
 homebrew_taps:
   - { name: 'homebrew/cask-versions', state: 'present' }     
+  - { name: 'cloudfoundry/tap', state: 'present' }     
 #  # See https://github.com/caskroom/homebrew-versions for available homebrew-versions Casks
 
 homebrew_casks:
+  #
   - { name: 'aws-vault', state: 'present' }
   - { name: 'dropbox', state: 'present' }
   - { name: 'firefox', state: 'present' }
@@ -41,7 +43,14 @@ homebrew_casks:
   - { name: 'postman', state: 'present' }
   - { name: 'smcfancontrol', state: 'present' }
   - { name: 'vlc', state: 'present' }
-#  - { name: '', state: 'present' }
+  
+  #Various quicklook plugins
+  #brew cask install qlstephen qlcolorcode qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+  - { name: 'qlstephen', state: 'present' }
+  - { name: 'qlmarkdown', state: 'present' }
+  - { name: 'quicklook-json', state: 'present' }
+  - { name: 'cf-cli', state: 'present' }
+
 #  - { name: '', state: 'present' }
 #  - { name: '', state: 'present' }
 #  - { name: '', state: 'present' }
